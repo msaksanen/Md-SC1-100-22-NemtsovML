@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+<HTML> 
+        <HEAD> 
+            <META charset="utf-8"> 
+            <TITLE>Code container</TITLE> 
+        </HEAD>
+        <style>
+            .small_ul {
+             list-style:lower-roman;
+             font-size:smaller;
+             font-weight:normal ;
+             }
+        </style> 
+    <BODY>
+        <div style="position: relative;
+                  display: block;
+                  margin-left: auto;
+                  margin-right: auto;
+                  width: 600px; height: 400px;
+                  border: solid black 1px"">
+             <div style="white-space: pre-line;
+             position: absolute;
+             left: 0px;
+             display: inline-block;
+             line-height:0.7;
+             width: 450px; height: 300px">
+                <ul style="list-style: upper-roman; font-weight: bold;"}>
+                    <li>Контейнер с кодом
+                        <ul class="small_ul">
+                         <li> Цвет фона: черный</li>
+                         <li> Цвет текста: зеленый</li>
+                         <li> Ширина: 400px</li>
+                         <li> Максимальная высота контейнера: 4 строки</li>
+                         <li> Переполнение: автоматическое</li>
+                        </ul>
+                    </li>
+                    <li>Список
+                        <ul class="small_ul">
+                         <li> Ширина: 350px</li>
+                         <li> Тип списка: римские цифры</li>
+                         <li> Тип вложенного списка: римские цифры в нижнем регистре </li>
+                        </ul>
+                    </li>
+                </ul>
+             </div>
+             <div style="white-space: pre-line;
+             position: absolute;
+             left: 5px;
+             bottom: 5px;
+             display: inline-block;
+             overflow: scroll;
+             line-height 30px;
+             background-color: black;
+             color:green;
+             width: 500px;
+             height: 120px;">
+             #!/usr/bin/env python
+             print 'Hello. I am a python program.'
+             name = raw_input("What is your name?")
+             print "Hello there, " + name + "!"
+             </div>
+        </div>
+    </BODY> 
+</HTML> 
