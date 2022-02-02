@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<HTML> 
+        <HEAD> 
+            <META charset="utf-8"> 
+            <META name="viewport" content="width=device-width, initial-scale=1"> 
+            <TITLE>NavMenu Menu Flex</TITLE> 
+        </HEAD> 
+        <STYLE>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+             }
+            div.MenuLevel1 {}
+            div.MenuLevel1 > div{ background-color: rgb(128, 128, 112); border-style: groove; position: relative; width: 100px; line-height: 30px; 
+                                  text-align: center; font-weight: bolder; border-radius: 8px ; cursor: pointer; float: left; }
+            div.MenuLevel2 {display: none}
+            div.MenuLevel2 > div { background-color: cyan; border-style: groove; width: 100px; line-height: 30px; border-radius: 8px; cursor: pointer }
+            div.MenuLevel1 > div:hover div.MenuLevel2 { display:flex; flex-flow: column; position: absolute; top: 100%; z-index: 1 }
+            div.MenuLevel1 > div:hover {background-color: green;}
+            div.MenuLevel2 > div:hover {background-color: yellowgreen;}
+            @media all and (max-width: 660px)
+                { 
+                div.MenuLevel1 >div {clear:left}
+                div.MenuLevel1 > div:hover div.MenuLevel2 {display: inline-flex; flex-flow: row; position: absolute; left: 100%; top:0% }
+                }
+        </STYLE>
+        <BODY>
+            <div class='MenuLevel1'>
+                <div> Понедельник</div>
+                <div>Вторник</div>
+                <div>Среда
+                    <div class="MenuLevel2">
+                        <div>Завтрак</div>
+                        <div>Обед</div>
+                        <div>Ужин</div>
+                    </div>
+                </div>
+                <div>Четверг</div>
+                <div>Пятница</div>
+                <div>Суббота</div>
+            </div>
+        </BODY> 
+    </HTML> 
