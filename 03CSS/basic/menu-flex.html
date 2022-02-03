@@ -13,7 +13,7 @@
              }
             div.MenuLevel1 {}
             div.MenuLevel1 > div{ background-color: rgb(128, 128, 112); border-style: groove; position: relative; width: 100px; line-height: 30px; 
-                                  text-align: center; font-weight: bolder; border-radius: 8px ; cursor: pointer; float: left; }
+                                  text-align: center; font-weight: bolder; border-radius: 8px ; cursor: pointer; display: inline-flex }
             div.MenuLevel2 {display: none}
             div.MenuLevel2 > div { background-color: cyan; border-style: groove; width: 100px; line-height: 30px; border-radius: 8px; cursor: pointer }
             div.MenuLevel1 > div:hover div.MenuLevel2 { display:flex; flex-flow: column; position: absolute; top: 100%; z-index: 1 }
@@ -21,8 +21,9 @@
             div.MenuLevel2 > div:hover {background-color: yellowgreen;}
             @media all and (max-width: 660px)
                 { 
-                div.MenuLevel1 >div {clear:left}
+                div.MenuLevel1 >div {display: flex; flex-flow: column;}
                 div.MenuLevel1 > div:hover div.MenuLevel2 {display: inline-flex; flex-flow: row; position: absolute; left: 100%; top:0% }
+                /* Зачем здесь flex-flow: row? Без него "обед-ужин" получается столбиком в мрбильном варианте */
                 }
         </STYLE>
         <BODY>

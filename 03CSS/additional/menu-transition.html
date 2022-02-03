@@ -3,7 +3,7 @@
         <HEAD> 
             <META charset="utf-8"> 
             <META name="viewport" content="width=device-width, initial-scale=1"> 
-            <TITLE>NavMenu Menu Block</TITLE> 
+            <TITLE>NavMenu Menu Transition</TITLE> 
         </HEAD> 
         <STYLE>
             *{
@@ -11,19 +11,19 @@
                 padding: 0;
                 box-sizing: border-box;
              }
-            div.MenuLevel1 {}
-            div.MenuLevel1 > div{ background-color: rgb(128, 128, 112); border-style: groove; position: absolute; width: 100px; line-height: 30px; 
-                                  text-align: center; font-weight: bolder;  border-radius: 8px ; cursor: pointer; float: left; }
-            div.MenuLevel2 {opacity: 0; width: 340px;}
-            div.MenuLevel2 > div { background-color: cyan; border-style: groove; width: 100px; line-height: 30px; border-radius: 8px; cursor: pointer }
-            div.MenuLevel1 > div:hover div.MenuLevel2 { opacity: 1; position: absolute; top: 100%; z-index: 1 }
+            div.MenuLevel1 > div{ background-color: rgb(128, 128, 112); border-style: groove; position: relative; width: 100px; line-height: 30px; 
+                                  text-align: center; font-weight: bolder;  border-radius: 8px ; cursor: pointer; display: inline-block;}
+            div.MenuLevel2 {position: absolute; top: 100%; width: max-content;}
+            div.MenuLevel2 > div {opacity: 0; transition: height 0.3s, opacity 0.4s; background-color: cyan; border-style: groove; width: 100px; line-height: 30px; border-radius: 8px; cursor: pointer }
+            div.MenuLevel1 > div:hover div.MenuLevel2>div { opacity: 1; }
             div.MenuLevel1 > div:hover {background-color: green;}
             div.MenuLevel2 > div:hover {background-color: yellowgreen;}
             @media all and (max-width: 660px)
                 { 
-                div.MenuLevel1 >div {clear:left}
-                div.MenuLevel2 > div {display:inline-block;}
-                div.MenuLevel1 > div:hover div.MenuLevel2 {position: absolute; left: 85%; top:0%;}
+                div.MenuLevel1 >div {display: block;}
+                div.MenuLevel2 { left: 100%; top: 0%; } 
+                div.MenuLevel2 > div {opacity: 0; transition: height 0.3s, opacity 0.4s; display: inline-block}
+                div.MenuLevel1 > div:hover div.MenuLevel2>div { opacity: 1}
                 }
         </STYLE>
         <BODY>
