@@ -7,6 +7,10 @@
         <STYLE>
             div {width: 700px; text-indent: 2em; text-align: justify; padding: 1em; 
                  border-style: solid; border-width: 1px; border-color: darkgray; border-radius: 0px 18px 0px 18px;}
+            p::before {content: url(file.jpg);}
+            span {display: inline;}
+            p>a:hover {font-weight: bold;}
+            p>a:hover p>span {display:none;}
         </STYLE>
         <BODY>
             <H1>Форматы файлов</H1>
@@ -35,13 +39,16 @@
             </div>
             <H2>Список файлов</H2>
             <p>
-                <a href="https://ru.wikipedia.org/wiki/Документ"><img src=file.jpg>Документ MS Word</a>
+                <a href="https://ru.wikipedia.org/wiki/Microsoft_Word"> Документ MS Word</a>
+                <span><img src="word.jpg"></span>
             </p>
             <p>
-                <a href="https://ru.wikipedia.org/wiki/Portable_Document_Format"><img src=file.jpg>Документ PDF</a>
+                <a href="https://ru.wikipedia.org/wiki/Portable_Document_Format" > Документ PDF</a>
+                <span><img src="pdf.png"></span>
             </p>
             <p>
-                <a href="https://ru.wikipedia.org/wiki/ZIP"><img src=file.jpg>Архив</a>
+                <a href="https://ru.wikipedia.org/wiki/ZIP">Архив</a>
+                <span><img src="zip.gif"></span>
             </p>
         </BODY> 
     </HTML> 
