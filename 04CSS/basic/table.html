@@ -6,10 +6,19 @@
         </HEAD> 
         <STYLE>
          body{margin: 10%;}
-         Table {line-height:1; font-size:150% ;}
+         table {line-height:1; font-size:150%; 
+                border-top-style: none; border-bottom-style: none; border-left-style: none;
+                width: max-content}
+         td {border-bottom: 1px dotted grey;; border-left: 1px dotted grey;}
+        .td_ex {border-bottom:  1px dotted grey; ; border-left: none}
+         caption  {caption-side: bottom; text-align:center}
+         th {text-align: center; font-weight: bold; background-color: grey; border-style: none;}
+         tr:hover {background: #65994c;}
+         tr:nth-child(2n+1) { background-color:aquamarine } 
         </STYLE>
         <BODY>
-            <Table align="center" border="5" width="300">
+            <table>
+            <caption>ДАННЫЕ О СОТРУДНИКАХ</caption>
             <tr>
                 <th>ФИО</th>
                 <th>пол</th> 
@@ -19,7 +28,7 @@
                 <th>Данные02</th> 
             </tr>
             <tr>
-                <td>Иванов Иван Иванович</td>
+                <td class="td_ex">Иванов Иван Иванович</td>
                 <td>М</td>
                 <td>начальник</td>
                 <td>01.01.1960</td>
@@ -27,7 +36,7 @@
                 <td>65668</td>
             </tr>
             <tr>
-                <td>Петрова Илона Петровна</td>
+                <td class="td_ex">Петрова Илона Петровна</td>
                 <td>Ж</td>
                 <td>секретарь</td>
                 <td>01.01.1989</td>
@@ -35,7 +44,7 @@
                 <td>25549</td>  
             </tr>
             <tr>
-                <td>Сидоров Илья Игоревич</td>
+                <td class="td_ex">Сидоров Илья Игоревич</td>
                 <td>М</td>
                 <td>бухгалтер</td> 
                 <td>01.01.1979</td>
@@ -43,7 +52,7 @@
                 <td>2554449</td>  
             </tr>
             <tr>
-                <td>Пупин Федор Федорович</td> 
+                <td class="td_ex">Пупин Федор Федорович</td> 
                 <td>М</td>
                 <td>водитель</td> 
                 <td>01.01.1963</td>
@@ -51,16 +60,13 @@
                 <td>24449</td>  
             </tr>
             <tr>
-                <td>Крупин Сергей Федорович</td> 
+                <td class="td_ex">Крупин Сергей Федорович</td> 
                 <td>М</td>
                 <td>водитель2</td> 
                 <td>01.01.1983</td>
                 <td>263442</td> 
                 <td>264449</td>  
             </tr>
-            <tr>
-                <td style="text-align:center" colspan="6" >ДАННЫЕ О СОТРУДНИКАХ</td>
-            </tr>
-            </Table>
+            </table>
         </BODY> 
     </HTML> 

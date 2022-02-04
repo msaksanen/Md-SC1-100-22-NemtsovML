@@ -8,9 +8,9 @@
             div {width: 700px; text-indent: 2em; text-align: justify; padding: 1em; 
                  border-style: solid; border-width: 1px; border-color: darkgray; border-radius: 0px 18px 0px 18px;}
             p::before {content: url(file.jpg);}
-            span {display: inline;}
+            span {display: none;}
             p>a:hover {font-weight: bold;}
-            p>a:hover p>span {display:none;}
+            p>a:hover ~span {display:inline;}
         </STYLE>
         <BODY>
             <H1>Форматы файлов</H1>
@@ -47,7 +47,7 @@
                 <span><img src="pdf.png"></span>
             </p>
             <p>
-                <a href="https://ru.wikipedia.org/wiki/ZIP">Архив</a>
+                <a class="weblink" href="https://ru.wikipedia.org/wiki/ZIP">Архив</a>
                 <span><img src="zip.gif"></span>
             </p>
         </BODY> 
