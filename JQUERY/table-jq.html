@@ -8,7 +8,7 @@
          body{margin: 10%;}
          table {line-height:1; font-size:150%; 
                 border-top-style: none; border-bottom-style: none; border-left-style: none;
-                width: max-content}
+                width: max-content;}
          td {border-bottom: 1px dotted grey;; border-left: 1px dotted grey;}
         .td_ex {border-bottom:  1px dotted grey; ; border-left: none}
          caption  {caption-side: bottom; text-align:center}
@@ -70,20 +70,24 @@
                 <td>264449</td>  
             </tr>
             </table>
-            <div>
-            <input type="submit" value="Показать">
-            </div> 
+            <div style="height:100px;"></div>
+            <input type="button" value="Нет скрытых строк" id="btn">
+            
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script> $(document).ready(function($) {
-            $('tr.trs').hover(
-function(){
-  alert('Вы попали на территорию элемента "foo", известную своей валидной версткой'+ 
-        'и наличием диких обработчиков событий.');
-},
-function(){
-  alert('Вы покинули территорию элемента "foo". Мы будем рады видеть вас снова.');
-});
-            });
-        </script>    
+                     $('.trs').hover(
+                        function(){
+                          $(this).css('display','none');
+                          $('#btn').val('Показать все строки')}
+                                    )
+                 })
+        </script>
+        <script> $(document).ready(function($) {
+                     $('#btn').on('click',function(){
+                        $('#btn').val('Нет скрытых строк');
+                        $('.trs').css('display','table-row ')
+                     })
+                 })
+        </script>
         </BODY> 
     </HTML> 
