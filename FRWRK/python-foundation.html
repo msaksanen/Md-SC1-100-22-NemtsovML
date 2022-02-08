@@ -1,0 +1,96 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python-1 Foundation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
+  </head>
+  <style>
+    h3 {color:blue} 
+    a {color:blue} 
+    .bold {font-weight: bolder}
+  </style>
+<body>
+   <div class="grid-container">
+      <div class="grid-x grid-padding-x">
+         <div class="small-12 medium-12 cell">
+           <h1>HOW-TO: Программа на Python, Часть 1</h1>
+         </div>
+         <div class="small-12 medium-4 cell">
+            <ul> 
+                <li><a href="python1-img-link.html">Программа на Python — часть 1</a></li> 
+                <li><a href="python2-img-link.html">Программа на Python — часть 2</a></li> 
+                <li><a href="python3-img-link.html">Программа на Python — часть 3</a></li> 
+            </ul>
+         </div>
+         <div class="small-12 medium-8 cell">
+            <H2>HOW-TO: Программа на Python, Часть 1</H2>
+         </div>
+         <div class="small-12 medium-4 cell">
+            <H3 id="cont"> Содержание</H3> 
+         <ul> 
+            <li><a href="#1p">Наша первая программа</a></li> 
+            <li><a href="#for">Пример цикла For</a></li>              
+         </ul>
+         </div>
+         <div class="small-12 medium-8 cell">
+          <p>Из множества существующих языков программирования Python — один из самых лёгких
+            в изучении. Он создан в конце 80-х годов XX века, но с тех пор он сильно изменился.
+            Хотя Python входит в состав большинства дистрибутивов Linux, на него часто не
+            обращают внимания при выборе языка для изучения. В этой статье мы рассмотрим
+            создание консольных приложений, а в следующей — программирование графических
+            интерфейсов (GUI). Давайте создадим простую программу прямо сейчас.</p>
+         </div>
+         <div class="small-12 medium-4 cell">
+         <H3 id="1p">Наша первая программа</H3>
+         <p><a href="#cont">К содержанию</a></p>
+         </div>
+         <div class="small-12 medium-8 cell">
+         <p>Наберём код в текстовом редакторе (например, в <b>gedit</b>). Потом мы разберёмся, что делает
+            каждая строка и пойдём дальше.</p>
+
+         <p>Введите эти 4 строки:</p>
+         <code>#!/usr/bin/env python<br>
+          print 'Hello. I am a python program.'<br>
+          name = raw_input("What is your name?")<br>
+          print "Hello there, " + name + "!"</code>
+
+         <p>Это всё. Сохраните файл как <b>hello.py</b> в любом месте. Я предлагаю сохранить его в папке
+            <b>python_examples</b> в домашнем каталоге. Этот пример показывает, как просто написать
+            программу на Python. Для запуска программы нужно сделать её файл исполняемым. Для
+            этого введите в терминале</p>
+
+         <p><u><b><i>chmod +x hello.py </i></b></u></p>
+
+         <p>в папке, в которой вы сохранили программу. Теперь запустите её.</p>
+
+         <code>greg@earth:~/python_examples$ ./hello.py<br>
+          Hello. I am a python program.<br>
+          What is your name? Ferd Burphel<br>
+          Hello there, Ferd Burphel!<br>
+          greg@earth:~/python_examples$</code>
+         
+         <p>Вот и всё.</p>
+         </div>
+         <div class="small-12 medium-4 cell">
+         <H3 class="bold" id="for">Пример цикла For </H3>
+         <p><a href="#cont">К содержанию</a></p>
+         </div>
+         <div class="small-12 medium-8 cell">
+         <p>Теперь давайте рассмотрим пример программирования цикла. Запустите текстовый
+            редактор и наберите следующую программу:</p>
+         <pre>
+<code>#!/usr/bin/env python
+for cntr in range(0,10):
+    print cntr</code></pre>
+         <p><i>Не забудьте поставить символ табуляции перед строкой «print cntr».</i> Это важно. В
+            Python для указания на блоки кода используются не круглые «(» и фигурные «{» скобки
+            как в других языках программирования, а отступы.</p>
+         </div>
+      </div>
+      </div>
+       <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+      </body>
+     </html>
