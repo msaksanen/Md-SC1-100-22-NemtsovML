@@ -1,0 +1,89 @@
+<!DOCTYPE html> 
+<HTML> 
+        <HEAD> 
+            <META charset="utf-8"> 
+            <TITLE>Таблица JQuery</TITLE> 
+        </HEAD> 
+        <STYLE>
+         body{margin: 10%;}
+         table {line-height:1; font-size:150%; 
+                border-top-style: none; border-bottom-style: none; border-left-style: none;
+                width: max-content}
+         td {border-bottom: 1px dotted grey;; border-left: 1px dotted grey;}
+        .td_ex {border-bottom:  1px dotted grey; ; border-left: none}
+         caption  {caption-side: bottom; text-align:center}
+         th {text-align: center; font-weight: bold; background-color: grey; border-style: none;}
+         .trs {font-family: Arial, Helvetica, sans-serif;}
+         
+         tr:nth-child(2n+1) { background-color:aquamarine } 
+         tr:hover {background: #65994c;}
+        </STYLE>
+        <BODY>
+            <table>
+            <caption>ДАННЫЕ О СОТРУДНИКАХ</caption>
+            <tr>
+                <th>ФИО</th>
+                <th>пол</th> 
+                <th>должнность</th> 
+                <th>дата рож.</th> 
+                <th>Данные01</th> 
+                <th>Данные02</th> 
+            </tr>
+            <tr class="trs">
+                <td class="td_ex">Иванов Иван Иванович</td>
+                <td>М</td>
+                <td>начальник</td>
+                <td>01.01.1960</td>
+                <td>15466</td> 
+                <td>65668</td>
+            </tr>
+            <tr class="trs">
+                <td class="td_ex">Петрова Илона Петровна</td>
+                <td>Ж</td>
+                <td>секретарь</td>
+                <td>01.01.1989</td>
+                <td>25542</td> 
+                <td>25549</td>  
+            </tr>
+            <tr class="trs">
+                <td class="td_ex">Сидоров Илья Игоревич</td>
+                <td>М</td>
+                <td>бухгалтер</td> 
+                <td>01.01.1979</td>
+                <td>2345542</td> 
+                <td>2554449</td>  
+            </tr>
+            <tr class="trs">
+                <td class="td_ex">Пупин Федор Федорович</td> 
+                <td>М</td>
+                <td>водитель</td> 
+                <td>01.01.1963</td>
+                <td>23442</td> 
+                <td>24449</td>  
+            </tr>
+            <tr class="trs">
+                <td class="td_ex">Крупин Сергей Федорович</td> 
+                <td>М</td>
+                <td>водитель2</td> 
+                <td>01.01.1983</td>
+                <td>263442</td> 
+                <td>264449</td>  
+            </tr>
+            </table>
+            <div>
+            <input type="submit" value="Показать">
+            </div> 
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script> $(document).ready(function($) {
+            $('tr.trs').hover(
+function(){
+  alert('Вы попали на территорию элемента "foo", известную своей валидной версткой'+ 
+        'и наличием диких обработчиков событий.');
+},
+function(){
+  alert('Вы покинули территорию элемента "foo". Мы будем рады видеть вас снова.');
+});
+            });
+        </script>    
+        </BODY> 
+    </HTML> 
